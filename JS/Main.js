@@ -80,3 +80,13 @@ let musics = [
     coverImage:"https://upmusics.com/wp-content/uploads/2023/05/photo_2023-05-14_21-00-34.jpg",
   },
 ];
+function PlayHandler() {
+  isPlaying = true;
+  PlayPauseHandler.setAttribute("src", "./Assets/Images/pause-circle.svg");
+  AudioElement.play();
+}
+function PauseHandler() {
+  isPlaying = false;
+  PlayPauseHandler.setAttribute("src", "./Assets/Images/play-circle.svg");
+  AudioElement.pause();
+}
