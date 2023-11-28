@@ -163,3 +163,30 @@ function SpeedOff() {
   FastSpeed.style.color = "#71829e";
   AudioElement.playbackRate = 1;
 }
+
+// Event Listeners
+PlayPauseHandler.addEventListener("click", () => {
+  if (isPlaying) {
+    PauseHandler();
+  } else {
+    PlayHandler();
+  }
+});
+PrevAudio.addEventListener("click", PrevAudioHandler);
+NextAudio.addEventListener("click", NextAudioHandler);
+BackSecond.addEventListener("click", () => {
+  AudioElement.currentTime -= 5;
+});
+ForwardSecond.addEventListener("click", () => {
+  AudioElement.currentTime += 5;
+});
+FastSpeed.addEventListener("click", () => {
+  if (isFastSpeed) {
+    SpeedOff();
+  } else {
+    SpeedOn();
+  }
+});
+AudioElement.addEventListener("ended", NextAudioHandler);
+AudioElement.addEventListener("timeupdate", updateProgressBar);
+progressContainer.addEventListener("click", setProgressBar);
