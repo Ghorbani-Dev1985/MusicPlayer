@@ -157,3 +157,9 @@ function SpeedOn() {
   FastSpeed.style.color = "#532ab9";
   AudioElement.playbackRate = 1.5;
 }
+function SpeedOff() {
+  isFastSpeed = false;
+  FastSpeed.style.opacity = 0.7;
+  FastSpeed.style.color = "#71829e";
+  AudioElement.playbackRate = 1;
+}
