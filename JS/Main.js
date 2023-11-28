@@ -90,3 +90,10 @@ function PauseHandler() {
   PlayPauseHandler.setAttribute("src", "./Assets/Images/play-circle.svg");
   AudioElement.pause();
 }
+function loadSong(song) {
+  SongName.textContent = song.songName;
+  ArtistName.textContent = song.artistName;
+  AudioElement.src = song.path;
+  MusicCover.setAttribute("src", song.coverImage);
+  MainWrapper.style.backgroundImage = `url('${song.coverImage}')`;
+}
