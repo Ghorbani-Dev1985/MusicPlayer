@@ -141,3 +141,13 @@ function updateProgressBar(e) {
     musicCurrentTime.textContent = currentMinutes + ":" + currentSeconds;
   }
 }
+// Set Progress Bar
+function setProgressBar(e) {
+  const width = this.clientWidth;
+  console.log(width);
+  const clickX = e.offsetX;
+  console.log(clickX);
+  const duration = AudioElement.duration;
+  console.log(duration);
+  AudioElement.currentTime = (clickX / width) * duration;
+}
