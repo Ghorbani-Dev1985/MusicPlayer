@@ -151,3 +151,9 @@ function setProgressBar(e) {
   console.log(duration);
   AudioElement.currentTime = (clickX / width) * duration;
 }
+function SpeedOn() {
+  isFastSpeed = true;
+  FastSpeed.style.opacity = 1;
+  FastSpeed.style.color = "#532ab9";
+  AudioElement.playbackRate = 1.5;
+}
