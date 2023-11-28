@@ -97,3 +97,11 @@ function loadSong(song) {
   MusicCover.setAttribute("src", song.coverImage);
   MainWrapper.style.backgroundImage = `url('${song.coverImage}')`;
 }
+function PrevAudioHandler() {
+  audioIndex--;
+  if (audioIndex < 0) {
+    audioIndex = musics.length - 1;
+  }
+  loadSong(musics[audioIndex]);
+  PlayHandler();
+}
