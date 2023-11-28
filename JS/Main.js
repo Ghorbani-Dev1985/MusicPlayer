@@ -105,3 +105,11 @@ function PrevAudioHandler() {
   loadSong(musics[audioIndex]);
   PlayHandler();
 }
+function NextAudioHandler() {
+  audioIndex++;
+  if (audioIndex > musics.length - 1) {
+    audioIndex = 0;
+  }
+  loadSong(musics[audioIndex]);
+  PlayHandler();
+}
